@@ -1,1 +1,1 @@
-Проверка пропуска CI 
+Documentation update
