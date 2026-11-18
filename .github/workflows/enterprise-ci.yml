@@ -9,6 +9,7 @@ permissions:
 
 jobs:
   matrix-test:
+    if: ${{ !contains(github.event.head_commit.message, '[skip ci]') && !contains(github.event.head_commit.message, '[ci skip]') }}
     name: Test (${{ matrix.os }}, Node ${{ matrix.node }})
     runs-on: ${{ matrix.os }}
     strategy:
@@ -39,6 +40,7 @@ jobs:
         run: npm test
 
   production-build:
+    if: ${{ !contains(github.event.head_commit.message, '[skip ci]') && !contains(github.event.head_commit.message, '[ci skip]') }}
     name: Production build
     needs: matrix-test
     runs-on: ubuntu-latest
