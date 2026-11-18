@@ -2,7 +2,7 @@
   "name": "akke-p-ci",
   "private": true,
   "scripts": {
-    "test": "node --test"
-     "build": "node -e \"require('fs').mkdirSync('dist', { recursive: true }); require('fs').writeFileSync('dist/build.txt', 'Build completed')\""
+    "test": "node --test",
+    "build": "node -e \"require('fs').mkdirSync('dist', { recursive: true }); require('fs').writeFileSync('dist/build.txt', 'Build completed')\""
   }
 }
