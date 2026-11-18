@@ -1,0 +1,7 @@
+{
+  "name": "akke-p-ci",
+  "private": true,
+  "scripts": {
+    "test": "node --test"
+  }
+}
